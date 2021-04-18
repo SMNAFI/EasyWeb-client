@@ -4,25 +4,6 @@ import { useState } from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.css';
 
-// const serviceData = [
-//     {
-//         serviceName: 'landing-page',
-//         title: 'Landing Page',
-//         price: '$550',
-//         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic aliquam soluta sapiente, quae cupiditate assumenda quo sunt. Quos, voluptate!"
-//     }, {
-//         serviceName: 'eCommerce',
-//         title: 'eCommerce',
-//         price: '$950',
-//         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic aliquam soluta sapiente, quae cupiditate assumenda quo sunt. Quos, voluptate!"
-//     }, {
-//         serviceName: 'seo',
-//         title: 'SEO',
-//         price: '$350',
-//         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum hic aliquam soluta sapiente, quae cupiditate assumenda quo sunt. Quos, voluptate!"
-//     }
-// ]
-
 const Services = () => {
     const [services, setServices] = useState([]);
     useEffect(() => {

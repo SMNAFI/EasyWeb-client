@@ -27,23 +27,12 @@ const Login = () => {
                 const newUser = { userName: displayName, email, photoURL };
                 setLoggedInUser(newUser);
                 history.replace(from);
-                // storeToken();
             }).catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorCode, errorMessage);
             });
     }
-
-    // const storeToken = () => {
-    //     firebase.auth().currentUser.getIdToken(true)
-    //         .then(function (idToken) {
-    //             sessionStorage.setItem('Token', idToken);
-    //             history.replace(from);
-    //         }).catch(function (error) {
-    //             console.log(error);
-    //         });
-    // }
 
     return (
         <div className="bg-brand vh-100 text-white d-flex align-items-center justify-content-center">
