@@ -1,0 +1,27 @@
+.sidebar-container{
+    background-color: #151823;
+    height: 97vh;
+    
+}
+
+.sidebar-header{
+    text-decoration: none;
+    color: #F35444;
+}
+
+.sidebar-header:hover{
+    color: #F35444;
+}
+
+.sidebar-link{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-link:hover{
+    color: lightsalmon;
+}
+
+.sidebar-container li{
+    margin-bottom: 1.5em;
+}

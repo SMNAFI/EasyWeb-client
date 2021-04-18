@@ -1,0 +1,16 @@
+.service-card{
+    background-color: #31333e;
+    border-radius: 10px;
+}
+
+.btn-service{
+    color: white;
+    border: 2px solid #F35444;
+    background: none;
+    padding: 12px 50px;
+    border-radius: 50px;
+}
+
+.btn-service:hover {
+    background-color: #F35444;
+}

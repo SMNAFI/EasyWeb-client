@@ -1,0 +1,12 @@
+.header-container{
+    height: 93vh;
+    padding: 0 10%;
+}
+
+.header-container h1 {
+    font-size: 6em;
+}
+
+.header-container p{
+    font-size: 1.1em;
+}
