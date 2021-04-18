@@ -7,7 +7,7 @@ const Dashboard = () => {
     const [loggedInUser] = useContext(UserContext);
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getAllServices')
+        fetch('https://calm-ravine-25463.herokuapp.com/getAllServices')
             .then(res => res.json())
             .then(data => {
                 console.log(data);

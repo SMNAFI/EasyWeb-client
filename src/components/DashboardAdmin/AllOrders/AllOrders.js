@@ -7,7 +7,7 @@ const AllOrders = () => {
     const [loggedInUser] = useContext(UserContext);
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getAllOrders')
+        fetch('https://calm-ravine-25463.herokuapp.com/getAllOrders')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -17,7 +17,7 @@ const AllOrders = () => {
 
     const handleChange = (e, id) => {
         console.log(e.target.value, id);
-        fetch('http://localhost:5000/updateStatus', {
+        fetch('https://calm-ravine-25463.herokuapp.com/updateStatus', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ id: id, status: e.target.value })

@@ -9,7 +9,7 @@ const Manage = () => {
     const [loggedInUser] = useContext(UserContext);
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/getAllServices')
+        fetch('https://calm-ravine-25463.herokuapp.com/getAllServices')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -18,7 +18,7 @@ const Manage = () => {
 
     const handleDelete = (e, id) => {
         const event = e.currentTarget.parentNode.parentNode;
-        fetch('http://localhost:5000/deleteService?id=' + id, {
+        fetch('https://calm-ravine-25463.herokuapp.com/deleteService?id=' + id, {
             method: 'DELETE'
         })
             .then(res => res.json())

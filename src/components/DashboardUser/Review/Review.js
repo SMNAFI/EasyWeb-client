@@ -8,7 +8,7 @@ const Review = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
         const reviewData = { ...data, image: loggedInUser.photoURL };
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://calm-ravine-25463.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(reviewData)

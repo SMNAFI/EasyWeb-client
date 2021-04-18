@@ -12,7 +12,7 @@ const OrderService = ({ serviceName }) => {
     const [orderData, setOrderData] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/getService?id=' + id)
+        fetch('https://calm-ravine-25463.herokuapp.com/getService?id=' + id)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -30,7 +30,7 @@ const OrderService = ({ serviceName }) => {
         console.log(orderDetails);
         console.log(paymentId);
 
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://calm-ravine-25463.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(orderDetails)
