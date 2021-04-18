@@ -10,13 +10,11 @@ const AllOrders = () => {
         fetch('https://calm-ravine-25463.herokuapp.com/getAllOrders')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setOrders(data);
             })
     }, []);
 
     const handleChange = (e, id) => {
-        console.log(e.target.value, id);
         fetch('https://calm-ravine-25463.herokuapp.com/updateStatus', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

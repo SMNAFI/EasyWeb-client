@@ -1,7 +1,6 @@
 .sidebar-container{
     background-color: #151823;
-    height: 97vh;
-    
+    height: 97vh;  
 }
 
 .sidebar-header{
@@ -24,4 +23,10 @@
 
 .sidebar-container li{
     margin-bottom: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .sidebar-container{
+        height: 100%;
+    }
 }

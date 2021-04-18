@@ -15,20 +15,16 @@ const OrderService = ({ serviceName }) => {
         fetch('https://calm-ravine-25463.herokuapp.com/getService?id=' + id)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setServiceInfo(data);
             })
     }, [id])
 
     const onSubmit = data => {
-        console.log(data);
         setOrderData(data);
     };
 
     const processCheckOut = paymentId => {
         const orderDetails = { ...orderData, paymentId, time: new Date(), status: 'pending', price: serviceInfo.price }
-        console.log(orderDetails);
-        console.log(paymentId);
 
         fetch('https://calm-ravine-25463.herokuapp.com/addOrder', {
             method: 'POST',

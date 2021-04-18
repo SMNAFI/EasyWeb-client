@@ -7,7 +7,6 @@ const AddService = () => {
     const [loggedInUser] = useContext(UserContext);
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        console.log(data);
         fetch('https://calm-ravine-25463.herokuapp.com/addService', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

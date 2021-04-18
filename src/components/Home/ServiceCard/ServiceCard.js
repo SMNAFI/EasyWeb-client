@@ -10,7 +10,7 @@ const ServiceCard = ({ service }) => {
     }
 
     return (
-        <div className="col-md-4 mb-4">
+        <div className="col-lg-4 col-md-6 mb-4">
             <div className="service-card p-5 text-white">
                 <h3>{title}</h3>
                 <h1>${price}</h1>

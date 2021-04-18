@@ -26,7 +26,7 @@ const SimpleCardForm = ({ processCheckOut }) => {
             setPaymentError(error.message);
             setPaymentSuccess(null);
         } else {
-            console.log('[PaymentMethod]', paymentMethod);
+            // console.log('[PaymentMethod]', paymentMethod);
             setPaymentError(null);
             setPaymentSuccess(paymentMethod.id);
             processCheckOut(paymentMethod.id);

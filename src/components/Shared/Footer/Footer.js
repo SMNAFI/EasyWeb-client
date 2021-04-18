@@ -10,21 +10,21 @@ const Footer = () => {
         <div>
             <div className="footer-container text-white">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-4 mb-5">
                         <h5>Quick Links</h5>
                         <ul className="list-unstyled">
+                            <li>
+                                <a className="text-decoration-none text-secondary" href="#home">Home</a>
+                            </li>
                             <li>
                                 <a className="text-decoration-none text-secondary" href="#about">About</a>
                             </li>
                             <li>
                                 <a className="text-decoration-none text-secondary" href="#services">Services</a>
                             </li>
-                            <li>
-                                <a className="text-decoration-none text-secondary" href="/">Admin</a>
-                            </li>
                         </ul>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 mb-5">
                         <h5>Stay Connected</h5>
                         <p>admin@easyweb.com</p>
                         <p>01548 245 457</p>

@@ -8,7 +8,7 @@ import WhyUs from '../WhyUs/WhyUs';
 
 const Home = () => {
     return (
-        <main id="header">
+        <main id="home">
             <Header></Header>
             <About></About>
             <WhyUs></WhyUs>

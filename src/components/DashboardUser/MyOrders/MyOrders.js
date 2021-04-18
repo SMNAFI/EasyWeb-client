@@ -5,6 +5,8 @@ import Sidebar from '../../Shared/Sidebar/Sidebar';
 const MyOrders = () => {
     const [loggedInUser] = useContext(UserContext);
     const [orders, setOrders] = useState([]);
+    const [haveOrders, setHaveOrders] = useState(true);
+
     useEffect(() => {
         fetch('https://calm-ravine-25463.herokuapp.com/getUserOrders', {
             method: 'POST',
@@ -13,8 +15,10 @@ const MyOrders = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                setOrders(data)
+                setOrders(data);
+                if (!data.length) {
+                    setHaveOrders(false);
+                }
             });
     }, [loggedInUser.email])
 
@@ -28,26 +32,32 @@ const MyOrders = () => {
                     <h3>My Order List</h3>
                     <h5 className="text-secondary">{loggedInUser.userName}</h5>
                 </div>
-                <table className="table table-striped table-borderless">
-                    <thead>
-                        <tr>
-                            <th className="text-secondary text-left" scope="col">Service Name</th>
-                            <th className="text-secondary" scope="col">Price</th>
-                            <th className="text-secondary" scope="col">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            orders.map((order, index) =>
-                                <tr key={index}>
-                                    <td>{order.serviceName}</td>
-                                    <td>{order.price}</td>
-                                    <td>{order.status}</td>
-                                </tr>
-                            )
-                        }
-                    </tbody>
-                </table>
+                {
+                    !haveOrders && <h3 className="text-center">You haven't ordered anything yet.</h3>
+                }
+                {
+                    orders.length !== 0 &&
+                    <table className="table table-striped table-borderless">
+                        <thead>
+                            <tr>
+                                <th className="text-secondary text-left" scope="col">Service Name</th>
+                                <th className="text-secondary" scope="col">Price</th>
+                                <th className="text-secondary" scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                orders.map((order, index) =>
+                                    <tr key={index}>
+                                        <td>{order.serviceName}</td>
+                                        <td>{order.price}</td>
+                                        <td>{order.status}</td>
+                                    </tr>
+                                )
+                            }
+                        </tbody>
+                    </table>
+                }
             </div>
 
         </div>

@@ -29,7 +29,6 @@ const Services = () => {
         fetch('https://calm-ravine-25463.herokuapp.com/getAllServices')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setServices(data);
             })
     }, [])

@@ -1,5 +1,7 @@
 .about-container{
-   background-color: lightpink;
-   height: 500px;
-   padding: 0 10%;
+   background: url('../../../images/bg-wall.jpg');
+   background-repeat: no-repeat;
+   background-position: right;
+   background-size: cover;
+   padding: 10%;
 }

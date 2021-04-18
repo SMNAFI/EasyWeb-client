@@ -4,7 +4,7 @@ import './TestimonialCard.css';
 const TestimonialCard = ({ review }) => {
     const { name, designation, description, image } = review;
     return (
-        <div className="col-md-4 mb-4">
+        <div className="col-lg-4 col-md-6 mb-4">
             <div className="p-5 testimonial-card text-center card">
                 <div>
                     <img src={image} alt="" />

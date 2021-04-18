@@ -2,3 +2,7 @@
     background-color: #151823;
     padding: 5% 10%;
 }
+
+.footer-container svg{
+    margin-right: 8px;
+}
