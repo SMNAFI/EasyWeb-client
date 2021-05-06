@@ -44,5 +44,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "A react website for a web development company displaying about company's information and their services. There are two separate dashboard for user and admin. \r [Server-Side Code](https://github.com/Porgramming-Hero-web-course/complete-website-server-SMNAFI) \\\r [Live Site](https://easyweb1.web.app/).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMNAFI/EasyWeb-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SMNAFI/EasyWeb-client/issues"
+  },
+  "homepage": "https://github.com/SMNAFI/EasyWeb-client#readme"
 }
